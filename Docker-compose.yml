@@ -5,11 +5,11 @@ services:
     image: node:14-alpine
     volumes:
       - ./:/usr/local/app/
-    command: sh -c "cd //usr//local//app && npm i && node index.js"
+    command: sh -c "cd //usr//local//app && npm i && node pubsub.js"
     ports:
       - "3000:3000"
 
-  redis:
+  redis-server:
     image: redis:alpine
     command: redis-server
     ports:
