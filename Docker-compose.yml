@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    image: node:14-alpine
+    volumes:
+      - ./:/usr/local/app/
+    command: sh -c "cd //usr//local//app && npm i && node index.js"
+    ports:
+      - "3000:3000"
+
+  redis:
+    image: redis
