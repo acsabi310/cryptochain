@@ -5,7 +5,7 @@ services:
     image: node:14-alpine
     volumes:
       - ./:/usr/local/app/
-    command: sh -c "cd //usr//local//app && npm i && node pubsub.js"
+    command: sh -c "cd //usr//local//app && npm i && npm run dev"
     ports:
       - "3000:3000"
 
